@@ -4,9 +4,16 @@ const path = require('path');
 const { spawn } = require('child_process');
 const cors = require('cors');
 const routes = require('./routes/routes');
+const bodyParser = require('body-parser');
 const { BASEPATH } = require('./config');
 
 const app = express();
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
+
 
 app.use(cors());
 
