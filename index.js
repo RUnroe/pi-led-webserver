@@ -2,7 +2,11 @@ const express = require('express');
 const path = require('path');
 // const bodyParser = require('body-parser');
 const { spawn } = require('child_process');
+const cors = require('cors');
+
 const app = express();
+
+app.use(cors());
 
 // Spawn child process to display boot up routine
 app.set('display', spawn('python', [`${process.cwd()}/src/routines/bootup.py`]));
