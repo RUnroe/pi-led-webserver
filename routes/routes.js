@@ -52,6 +52,10 @@ const updateLights = (req, res) => {
       res.json(response);
 }
 
+const frontend = (req, res) => {
+    res.send("Hello RBGTQ world");
+}
+
 const routes = [
 	{
 		uri: '/kill',
@@ -62,6 +66,11 @@ const routes = [
 		uri: '/lights',
 		methods: ['put'],
 		handler: [reset, updateLights]
+	},
+    {
+		uri: '/lights',
+		methods: ['get'],
+		handler: [frontend]
 	},
 	
 ];
