@@ -35,7 +35,7 @@ const clear = (req, res) => {
 const updateLights = (req, res) => {
     const {
         name, brightness, hex, colorType, r, g, b, delay,
-      } = req.query;
+      } = req.body;
   
       // Get RGB value
       const rgb = setColor(hex, colorType, r, g, b);
