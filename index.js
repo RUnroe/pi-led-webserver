@@ -8,6 +8,8 @@ const app = express();
 
 app.use(cors());
 
+app.use('/routines', routes);
+
 // Spawn child process to display boot up routine
 app.set('display', spawn('python', [`${process.cwd()}/src/routines/bootup.py`]));
 

@@ -1,4 +1,7 @@
-const { handle } = require('../util');
+const { spawn } = require('child_process');
+const reset = require('./reset');
+const allRoutines = require('../routines/routine-manifest');
+
 const { normalizeName, setColor, makeResponse } = require('./helper');
 
 // Clear the LED strip and kill any child processes
@@ -36,7 +39,7 @@ const routes = [
     {
 		uri: '/lights',
 		methods: ['put'],
-		handler: [updateLights]
+		handler: [reset, updateLights]
 	},
 	
 ];
