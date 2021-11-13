@@ -4,15 +4,16 @@ const path = require('path');
 const { spawn } = require('child_process');
 const cors = require('cors');
 const routes = require('./routes/routes');
+const { BASEPATH } = require('./config');
 
 const app = express();
 
 app.use(cors());
 
-app.use('/routines', routes);
+// app.use('/routines', routes);
 
 // Spawn child process to display boot up routine
-app.set('display', spawn('python', [`${process.cwd()}/src/routines/bootup.py`]));
+app.set('display', spawn('python', [`${BASEPATH}/src/routines/bootup.py`]));
 
 
 

@@ -5,7 +5,7 @@
  * @since  3/22/20
  */
 
-const { BASEPATH } = require('../../config');
+const { BASEPATH } = require('../config');
 
 module.exports = {
   'Show Off': {

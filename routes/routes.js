@@ -1,8 +1,30 @@
 const { spawn } = require('child_process');
-const reset = require('./reset');
 const allRoutines = require('../routines/routine-manifest');
 
 const { normalizeName, setColor, makeResponse } = require('./helper');
+
+
+
+function reset(req, res, next) {
+    const clear = new Promise((resolve) => {
+      const display = req.app.get('display');
+  
+      // If child process has not exited yet
+      if (display.exitCode == null) {
+        // Send kill signal
+        display.kill('SIGINT');
+  
+        // Resolve promise when child process dies... like real life
+        display.on('close', resolve);
+      } else {
+        resolve();
+      }
+    });
+    // Move along now
+    clear.then(() => next());
+  }
+
+
 
 // Clear the LED strip and kill any child processes
 const clear = (req, res) => {
