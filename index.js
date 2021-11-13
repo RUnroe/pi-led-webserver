@@ -20,7 +20,7 @@ app.use(cors());
 // app.use('/routines', routes);
 
 // Spawn child process to display boot up routine
-app.set('display', spawn('sudo python', [`${BASEPATH}/src/routines/bootup.py`]));
+app.set('display', spawn('python', [`${BASEPATH}/routines/bootup.py`]));
 
 
 
