@@ -44,7 +44,7 @@ const updateLights = (req, res) => {
       const options = [`-l ${brightness}`, `-r ${rgb.r}`, `-g ${rgb.g}`, `-b ${rgb.b}`, `-d ${delay}`].filter((argument) => argument.search('undefined') === -1);
   
       // Combine arguments and spawns child process
-      console.log(allRoutines, allRoutines[normalizeName(name)].path);
+    //   console.log(allRoutines, allRoutines[normalizeName(name)].path);
       const args = [allRoutines[normalizeName(name)].path, ...options];
       req.app.set('display', spawn('python', args));
   
@@ -54,7 +54,7 @@ const updateLights = (req, res) => {
 }
 
 const frontend = (req, res) => {
-    res.send("Hello RBGTQ world");
+    res.send("Hello RGBTQ world");
 }
 
 const routes = [
