@@ -3,6 +3,7 @@ const path = require('path');
 // const bodyParser = require('body-parser');
 const { spawn } = require('child_process');
 const cors = require('cors');
+const routes = require('./routes/routes');
 
 const app = express();
 
