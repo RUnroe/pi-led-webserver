@@ -45,7 +45,7 @@ const updateLights = (req, res) => {
   
       // Combine arguments and spawns child process
       const args = [allRoutines[normalizeName(name)].path, ...options];
-      req.app.set('display', spawn('python', args));
+      req.app.set('display', spawn('sudo python', args));
   
       // Send back an object with the settings the client provided
       const response = makeResponse(name, brightness, hex, colorType, r, g, b, delay);
