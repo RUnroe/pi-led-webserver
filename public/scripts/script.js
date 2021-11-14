@@ -8,6 +8,7 @@ const updateSelectedOption = (name, settings) => {
     const colorSection = document.getElementById("colorSection");
     
     selectedOption = name;
+    console.log(selectedOption);
 
     brightnessSection.classList.add("hidden");
     delaySection.classList.add("hidden");
@@ -27,12 +28,21 @@ const updateSelectedStyle = (name) => {
 const optionButtonClick = (event) => {
     const name = event.target.dataset.name;
     const settings = event.target.dataset.settings;
-    console.log(event.target.dataset);
 
     updateSelectedStyle(name);
 
     updateSelectedOption(name, settings);
 }
+
+const optionSelectChange = (event) => {
+    const name = event.target.value.split("-")[0];
+    const settings = event.target.value.split("-")[1];
+
+    updateSelectedStyle(name);
+
+    updateSelectedOption(name, settings);
+}
+
 
 const render = () => {
 
@@ -42,6 +52,8 @@ const addEventListeners = () => {
     document.querySelectorAll(".option").forEach(option => {
         option.addEventListener("click", optionButtonClick);
     });
+
+    document.getElementById("optionSelect").addEventListener("input", optionSelectChange);
 
 }
 

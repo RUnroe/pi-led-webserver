@@ -8,6 +8,9 @@ html
         script(defer, src="scripts/script.js")
         title 130 Lights
         meta(name="theme-color" content="#403d52")
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
     body 
         div.side-panel
             h1 Lights
@@ -19,7 +22,7 @@ html
             div.top-content
                 select#optionSelect
                     each op in options
-                        option(data-settings=op.settings, data-name=op.name, value=op.name)=op.name
+                        option(value=`${op.name}-${op.settings}`)=op.name
                 h1#selectedTitle Show Off
                 div.input-section#brightnessSection
                     h2 Brightness
