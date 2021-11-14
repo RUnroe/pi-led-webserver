@@ -12,7 +12,8 @@ const app = express();
 app.set("trust proxy", 1);
 app.set("view engine", "pug");
 app.set("views", __dirname + "/views");
-app.use(express.static(path.join(__dirname + "/public")));
+app.use("/styles", express.static(path.join(__dirname + "/public/styles")));
+app.use("/scripts", express.static(path.join(__dirname + "/public/scripts")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
