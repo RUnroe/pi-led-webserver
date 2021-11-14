@@ -4,6 +4,7 @@
     --color-white: #fff;
     --color-dark: #403d52;
     --color-grey: #ccc;
+    --color-danger: #eb4444;
 }
 
 body, html {
@@ -132,7 +133,8 @@ input[type="color"] {
     background-color: var(--color-primary);
     color: var(--color-white);
     text-align: center;
-    padding:0.75rem 3.5rem;
+    padding:0.75rem 1rem;
+    min-width: 10rem;
     border:none;
     font-size: 1rem;
     font-weight: 600;
@@ -145,6 +147,32 @@ input[type="color"] {
 .render-btn:hover {
     filter:hue-rotate(15deg);
 }
+
+.off-btn {
+    display:block;
+    margin:1rem auto;
+    background-color: var(--color-danger);
+    color: var(--color-white);
+    text-align: center;
+    padding:0.75rem 1rem;
+    min-width: 10rem;
+    border:none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    transition:filter 0.1s;
+}
+
+.off-btn:hover {
+    filter:brightness(1.1);
+}
+
+
+
+
+
 .hidden {
     display:none;
 }

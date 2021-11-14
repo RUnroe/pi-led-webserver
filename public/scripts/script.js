@@ -23,6 +23,7 @@ const updateSelectedStyle = (name) => {
     let selected = document.querySelector("div.option.selected");
     if(selected) selected.classList.remove("selected");
     document.querySelector(`div.option[data-name="${name}"]`).classList.add("selected");
+    document.getElementById("selectedTitle").innerHTML = name;
 }
 
 const optionButtonClick = (event) => {
@@ -45,8 +46,24 @@ const optionSelectChange = (event) => {
 
 
 const render = () => {
-
+    const putData = {
+        "name": selectedOption,
+        "hex": document.getElementById("colorInput").value,
+        "brightness": document.getElementById("brightnessInput").value,
+        "colorType": "hex",
+        "delay": document.getElementById("delayInput").value
+    };
+    fetch("/lights", {
+        method: "PUT",
+        headers: new Headers({'Content-Type': 'application/json'}),
+        body: JSON.stringify(putData)
+    });
 }
+
+const turnOff = () => {
+    fetch("/kill", {method: "DELETE"});
+}
+
 
 const addEventListeners = () => {
     document.querySelectorAll(".option").forEach(option => {
@@ -54,7 +71,8 @@ const addEventListeners = () => {
     });
 
     document.getElementById("optionSelect").addEventListener("input", optionSelectChange);
-
+    document.getElementById("renderBtn").addEventListener("click", render);
+    document.getElementById("offBtn").addEventListener("click", turnOff);
 }
 
 
