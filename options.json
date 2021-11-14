@@ -1,0 +1,87 @@
+[
+    {
+        "name": "Show Off",
+        "settings": ""
+    },
+    {
+        "name": "Crossfade",
+        "settings": "brightness, delay"
+    },
+    {
+        "name": "Rainbow",
+        "settings": "brightness, delay"
+    },
+
+    {
+        "name": "Police",
+        "settings": "brightness, delay"
+    },
+    {
+        "name": "Color Fade",
+        "settings": "brightness, delay"
+    },
+    {
+        "name": "Color Flash",
+        "settings": "brightness, delay"
+    },
+    {
+        "name": "Set Color",
+        "settings": "brightness, color"
+    },
+    {
+        "name": "Color Wipe",
+        "settings": "brightness, delay"
+    },
+    {
+        "name": "Random Color Fill",
+        "settings": "brightness, delay"
+    },
+    {
+        "name": "Twinkle",
+        "settings": "brightness, color, delay"
+    },
+    {
+        "name": "Random Twinkle",
+        "settings": "brightness, delay"
+    },
+    {
+        "name": "Strobe",
+        "settings": "color"
+    },
+    {
+        "name": "Scanner",
+        "settings": "brightness, color, delay"
+    },
+    {
+        "name": "Colorful Scanner",
+        "settings": "brightness, delay"
+    },
+    {
+        "name": "Theater Lights",
+        "settings": "brightness, color, delay"
+    },
+    {
+        "name": "Rainbow Theater Lights",
+        "settings": "brightness, delay"
+    },
+    {
+        "name": "Wake Up",
+        "settings": "brightness, color"
+    },
+    {
+        "name": "Siren",
+        "settings": "brightness, color, delay"
+    },
+    {
+        "name": "Listening",
+        "settings": "brightness, color"
+    },
+    {
+        "name": "Not Listening",
+        "settings": "brightness, color"
+    },
+    {
+        "name": "Notify",
+        "settings": "brightness, color, delay"
+    }
+]

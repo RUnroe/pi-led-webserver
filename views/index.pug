@@ -1,5 +1,29 @@
 doctype hmtl
 html
-    head       
+    head
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet")   
         link(rel='stylesheet' href='/styles/stlyes.css')
         script(defer, src="/scripts/script.js")
+    body 
+        div.side-panel
+            h1 Lights
+            hr
+            div#optionList
+                each option in options
+                    div.option(data-settings=option.settings)=option.name
+        div.main
+            div.top-content
+                h1#selectedTitle
+                div.input-section#brightnessSection
+                    h2 Brightness
+                    input(type="range" min="25" max="250" value="200" step="25")#brightnessInput
+                div.input-section#delaySection
+                    h2 Delay
+                    input(type="range" min="0" max="250" value="200" step="10")#delayInput
+                div.input-section#colorSection
+                    h2 Color
+                    input(type="color" value="#74BCFF")#colorInput
+            div.bottom-content
+                button.render-btn#render Render

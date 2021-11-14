@@ -1,7 +1,7 @@
 const { spawn } = require('child_process');
 const allRoutines = require('../routines/routine-manifest');
 const { normalizeName, setColor, makeResponse } = require('./helper');
-
+const options = require("../options.json");
 
 
 function reset(req, res, next) {
@@ -53,7 +53,7 @@ const updateLights = (req, res) => {
 }
 
 const frontend = (req, res) => {
-    res.render("index", {});
+    res.render("index", {options: options});
 }
 
 const routes = [
