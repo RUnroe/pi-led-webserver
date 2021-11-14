@@ -1,10 +1,138 @@
-
+:root {
+    --color-primary: #74BCFF;
+    --color-light: #f1f1f1;
+    --color-white: #fff;
+    --color-dark: #403d52;
+    --color-grey: #ccc;
+}
 
 body, html {
     margin:0;
     padding:0;
     font-family: 'Raleway', sans-serif;
+    height: 100%;
+    background-color: var(--color-light);
+    min-height: 100vh;
 }
 
 
 
+.side-panel {
+    background-color: var(--color-dark);
+    padding:0.5rem;
+    color:var(--color-white);
+}
+.side-panel h1 {
+    text-align: center;
+    margin:1rem;
+}
+
+#optionList, .side-panel hr {
+    display:none;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 6rem);
+    padding:1.5rem 1rem;
+    box-sizing: border-box;
+}
+
+.top-content {
+    margin:0 auto;
+    width:90%;
+}
+
+#optionSelect {
+    padding:0.45rem;
+    font-family: 'Raleway', sans-serif;
+    /* font-weight: 600; */
+    font-size: 1rem;
+    border:2px solid var(--color-grey);
+    border-radius: 4px;
+    cursor: pointer;
+    transition:border-color 0.15s;
+    width:100%;
+    max-width: 400px;
+    margin:0 auto;
+    display: block;
+    color: var(--color-dark);
+}
+
+#optionSelect:focus {
+    outline:none;
+    border-color: var(--color-primary);
+}
+
+.top-content h1 {
+    font-weight: 400;
+    color: var(--color-dark);
+    text-align: center;
+}
+
+.top-content h2 {
+    font-weight: 400;
+    color: var(--color-dark);
+    font-size: 1.4rem;
+}
+
+
+  
+
+
+input[type='range'] {
+    width:100%;
+    overflow: visible;
+    -webkit-appearance: none;
+    background-color: var(--color-grey);
+    border-radius: 4px;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    color: #13bba4;
+    margin-top: -1px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    width: 7px;
+    border-radius: 100vh;
+    transform: scale(2);
+    -webkit-appearance: none;
+    height: 7px;
+    cursor: pointer;
+    background: var(--color-dark);
+    /* box-shadow: -100vw 0 0 100vw #43e5f7; */
+}
+
+
+input[type="color"] {
+    width:100%;
+    display:block;
+    margin:0 auto;
+    max-width: 200px;
+    min-height:3rem;
+    cursor: pointer;
+}
+
+.render-btn {
+    display:block;
+    margin:0 auto;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding:0.75rem 3.5rem;
+    border:none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    transition:filter 0.1s;
+}
+
+.render-btn:hover {
+    filter:hue-rotate(15deg);
+}
