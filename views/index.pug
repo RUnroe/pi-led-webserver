@@ -14,9 +14,12 @@ html
             hr
             div#optionList
                 each option in options
-                    div.option(data-settings=option.settings)=option.name
+                    div.option(data-settings=option.settings, data-name=option.name)=option.name
         div.main
             div.top-content
+                select#optionSelect
+                    each op in options
+                        option(data-settings=op.settings, data-name=op.name, value=op.name)=op.name
                 h1#selectedTitle
                 div.input-section#brightnessSection
                     h2 Brightness
