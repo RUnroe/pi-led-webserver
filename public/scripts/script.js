@@ -8,7 +8,6 @@ const updateSelectedOption = (name, settings) => {
     const colorSection = document.getElementById("colorSection");
     
     selectedOption = name;
-    console.log(selectedOption);
 
     brightnessSection.classList.add("hidden");
     delaySection.classList.add("hidden");
@@ -48,8 +47,8 @@ const optionSelectChange = (event) => {
 const render = () => {
     const putData = {
         "name": selectedOption,
-        "hex": document.getElementById("colorInput").value,
-        "brightness": document.getElementById("brightnessInput").value.split("#")[1],
+        "hex": document.getElementById("colorInput").value.split("#")[1],
+        "brightness": document.getElementById("brightnessInput").value,
         "colorType": "hex",
         "delay": document.getElementById("delayInput").value
     };
