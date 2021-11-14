@@ -49,7 +49,7 @@ const render = () => {
     const putData = {
         "name": selectedOption,
         "hex": document.getElementById("colorInput").value,
-        "brightness": document.getElementById("brightnessInput").value,
+        "brightness": document.getElementById("brightnessInput").value.split("#")[1],
         "colorType": "hex",
         "delay": document.getElementById("delayInput").value
     };
