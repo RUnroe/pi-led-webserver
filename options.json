@@ -65,23 +65,7 @@
         "settings": "brightness, delay"
     },
     {
-        "name": "Wake Up",
-        "settings": "brightness, color"
-    },
-    {
         "name": "Siren",
-        "settings": "brightness, color, delay"
-    },
-    {
-        "name": "Listening",
-        "settings": "brightness, color"
-    },
-    {
-        "name": "Not Listening",
-        "settings": "brightness, color"
-    },
-    {
-        "name": "Notify",
         "settings": "brightness, color, delay"
     }
 ]

@@ -24,13 +24,13 @@ html
                     each op in options
                         option(value=`${op.name}-${op.settings}`)=op.name
                 h1#selectedTitle Show Off
-                div.input-section#brightnessSection
+                div.input-section#brightnessSection.hidden
                     h2 Brightness
                     input(type="range" min="25" max="250" value="200" step="25")#brightnessInput
-                div.input-section#delaySection
+                div.input-section#delaySection.hidden
                     h2 Delay
                     input(type="range" min="0" max="250" value="200" step="10")#delayInput
-                div.input-section#colorSection
+                div.input-section#colorSection.hidden
                     h2 Color
                     input(type="color" value="#74BCFF")#colorInput
             div.bottom-content
