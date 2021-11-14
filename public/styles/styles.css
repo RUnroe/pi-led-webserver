@@ -27,6 +27,15 @@ body, html {
     margin:1rem;
 }
 
+.side-panel hr {
+    background-color: var(--color-light);
+    height:2px;
+    border:none;
+    width:80%;
+
+}
+
+
 #optionList, .side-panel hr {
     display:none;
 }
@@ -112,7 +121,7 @@ input[type="color"] {
     width:100%;
     display:block;
     margin:0 auto;
-    max-width: 200px;
+    max-width: 233px;
     min-height:3rem;
     cursor: pointer;
 }
@@ -135,4 +144,63 @@ input[type="color"] {
 
 .render-btn:hover {
     filter:hue-rotate(15deg);
+}
+
+@media all and (min-width:767px) {
+    #optionList, .side-panel hr {
+        display:block;
+    }
+    body {
+        display: grid;
+        grid-template-columns: 20rem auto;
+        height:100vh;
+        max-height: 100vh;
+        overflow:hidden;
+    }
+    #optionSelect {
+        display: none;
+    }
+    .top-content {
+        max-width: 700px;
+    }
+    .option {
+        width:100%;
+        padding: 0.65rem 0 0.65rem 1rem;
+        cursor: pointer;
+        transition:background-color 0.1s;
+        box-sizing: border-box;
+    }
+    .option:hover {
+        background-color: #535066;
+    }
+
+    .option.selected {
+        padding: 0.65rem 0 0.65rem 0.5rem;
+        margin-left:0.5rem;
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+        background-color: var(--color-light);
+        color:var(--color-dark);
+    }
+    .option.selected:hover {
+        background-color:var(--color-light);
+    }
+
+
+    #optionList {
+        overflow-x: hidden;
+        height: calc(100vh - 5rem - 2px);
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    #optionList::-webkit-scrollbar {
+        display: none;
+      }
+      
+
+    .side-panel {
+        padding:0;
+        max-height: 100vh;
+    }
 }
