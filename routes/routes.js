@@ -1,6 +1,5 @@
 const { spawn } = require('child_process');
 const allRoutines = require('../routines/routine-manifest');
-
 const { normalizeName, setColor, makeResponse } = require('./helper');
 
 
@@ -54,7 +53,7 @@ const updateLights = (req, res) => {
 }
 
 const frontend = (req, res) => {
-    res.send("Hello RGBTQ world");
+    res.render("index", {});
 }
 
 const routes = [
