@@ -1,5 +1,9 @@
 [
     {
+        "name": "Set Color",
+        "settings": "brightness, color"
+    },
+    {
         "name": "Show Off",
         "settings": ""
     },
@@ -23,10 +27,6 @@
     {
         "name": "Color Flash",
         "settings": "brightness, delay"
-    },
-    {
-        "name": "Set Color",
-        "settings": "brightness, color"
     },
     {
         "name": "Color Wipe",

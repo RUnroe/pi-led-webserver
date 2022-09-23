@@ -75,5 +75,13 @@ const addEventListeners = () => {
 }
 
 
+const setDefaultOption = () => {
+    updateSelectedStyle("Set Color");
+
+    updateSelectedOption("Set Color", "brightness, color");
+}
+
+
 
 addEventListeners();
+setDefaultOption();

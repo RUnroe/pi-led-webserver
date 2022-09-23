@@ -23,7 +23,7 @@ html
                 select#optionSelect
                     each op in options
                         option(value=`${op.name}-${op.settings}`)=op.name
-                h1#selectedTitle Show Off
+                h1#selectedTitle Set Color
                 div.input-section#brightnessSection.hidden
                     h2 Brightness
                     input(type="range" min="25" max="250" value="200" step="25")#brightnessInput
